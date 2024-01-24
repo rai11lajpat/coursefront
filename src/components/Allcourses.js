@@ -4,7 +4,7 @@ import { Container } from "reactstrap";
 import axios from "axios";
 import base_url from "../api/bootApi";
 import { toast } from "react-toastify";
-
+import UpdateC from "./UpdateC";
 const Allcourse=()=>{
     useEffect(()=>{
         document.title="All courses";
@@ -32,8 +32,35 @@ const Allcourse=()=>{
 
 
     const [courses,setCourses]=useState([]);
+
+    const updateCourse=(id)=>{
+        setCourses(courses.filter((c)=>c.id !=id));
+    }
+
+
+
+    //update Apu 
+    const [update,setUpdate]=useState(false);
+
+    const [c,setC]=useState();
+    const setUp=(c)=>{
+        setUpdate(true);
+        setC(c);
+        console.log(c);
+    }
+   
     return(
+
         <div>
+            <div>
+                {
+                    update&&(
+                        <>
+                        <UpdateC up={c} upt={updateCourse}/>
+                        </>
+                    )
+                }
+            </div>
             
             <Container>
                 <div className="text-center">
@@ -44,7 +71,7 @@ const Allcourse=()=>{
 
             {
                 courses.length>0? courses.map((c)=>
-                    <Courses course={c}/>
+                    <Courses course={c} update={updateCourse} onUpdate={setUp}/>
                 ):"No coueses"
             }
             </Container>
