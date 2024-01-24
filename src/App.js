@@ -1,24 +1,51 @@
-import logo from './logo.svg';
+
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
+import Home from './components/Home';
+import Allcourse from './components/Allcourses';
+import AddCourses from './components/AddCourses';
+import { Col, Container, Row } from 'reactstrap';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
+  // const notify=()=>{
+  //   toast.dark("Waoooo",{position:"bottom-left"});
+  // };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ToastContainer/>
+      <Router>
+        <Container>
+          <Header />
+          <Row>
+            <Col md={4}>
+              <Menu />
+            </Col>
+
+
+            <Col md={8}>
+              <Routes>
+                
+              <Route path='/' Component={Home}/>
+              <Route path='/add-course' Component={AddCourses} exact/>
+              <Route path='/view-course' Component={Allcourse}/>
+         
+
+              </Routes>
+                 </Col>
+
+
+          </Row>
+        </Container>
+      </Router>
+
+
     </div>
+
+
   );
 }
 
