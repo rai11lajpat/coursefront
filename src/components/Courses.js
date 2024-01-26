@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import { Card, CardBody, CardSubtitle, CardText, Container,Button } from "reactstrap";
+import { Card, CardBody, CardSubtitle, CardText, Container,Button, Row } from "reactstrap";
 import base_url from "../api/bootApi";
 import { toast } from "react-toastify";
 
@@ -40,6 +40,7 @@ function Courses({course,update,onUpdate}){
                     </Container>
                 </CardBody>
             </Card>
+           
         </div>
     );
 }

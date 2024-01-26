@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 
 
 
-
 const AddCourses=()=>{
     const [course,setcourse]=useState({});
     const add=(course)=>{
@@ -22,8 +21,7 @@ const AddCourses=()=>{
             },
             (error)=>{
                 console.error(error);
-            }
-            
+            }  
         );
     }
     useEffect(()=>{
@@ -63,11 +61,8 @@ const AddCourses=()=>{
                     <Button type="submit" color="success">Add</Button>
                     <Button type="reset" color="warning m-2">Clear</Button>
                 </Container>
-
             </Form>
-
         </div>
     );
 }
-
 export default AddCourses;

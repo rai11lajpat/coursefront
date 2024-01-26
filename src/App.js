@@ -9,24 +9,28 @@ import Header from './components/Header';
 import Menu from './components/Menu';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
+import backgroundImage from "./images/bg.jpg";
 
 function App() {
   // const notify=()=>{
   //   toast.dark("Waoooo",{position:"bottom-left"});
   // };
   return (
-    <div>
+    <div >
       <ToastContainer/>
       <Router>
-        <Container>
+        {/* <Container style={{backgroundImage:`url()` , height: 700, width: 1000 }}> */}
+        <div>
           <Header />
           <Row>
+            
             <Col md={4}>
               <Menu />
             </Col>
 
 
             <Col md={8}>
+            <div >
               <Routes>
                 
               <Route path='/' Component={Home}/>
@@ -35,11 +39,13 @@ function App() {
          
 
               </Routes>
+              </div>
                  </Col>
 
-
+                 
           </Row>
-        </Container>
+          </div>
+        {/* </Container> */}
       </Router>
 
 
