@@ -6,7 +6,7 @@ function Header({name}){
 <div>
     <Card>
         <CardBody className="my-2 bg-primary">
-        <h1 className="text-center my-2 text-white">Welcome to Course Registration Application</h1>
+        <h4 className="text-center my-2 text-white">Welcome to Course Registration Application</h4>
 
         </CardBody>
     </Card>

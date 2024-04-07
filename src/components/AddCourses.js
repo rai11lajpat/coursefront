@@ -41,7 +41,8 @@ const AddCourses=()=>{
             <Form onSubmit={handleForm}>
                 <FormGroup>
                     <label for="userId">Course id</label>
-                    <Input type="text" placeholder="Enter here" id="user-id" onChange={(e)=>{
+                    <Input type="text" placeholder="Enter here" id="user-id"
+                     onChange={(e)=>{
                         setcourse({...course,id:e.target.value})
                     }}/>
                 </FormGroup>

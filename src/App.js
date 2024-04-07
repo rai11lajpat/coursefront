@@ -4,12 +4,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import Home from './components/Home';
 import Allcourse from './components/Allcourses';
 import AddCourses from './components/AddCourses';
-import { Col, Container, Row } from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
-import backgroundImage from "./images/bg.jpg";
+
 
 function App() {
   // const notify=()=>{

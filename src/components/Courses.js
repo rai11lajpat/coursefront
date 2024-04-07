@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import { Card, CardBody, CardSubtitle, CardText, Container,Button, Row } from "reactstrap";
+import { Card, CardBody, CardSubtitle, CardText, Container,Button } from "reactstrap";
 import base_url from "../api/bootApi";
 import { toast } from "react-toastify";
 
@@ -25,7 +25,7 @@ function Courses({course,update,onUpdate}){
             <Card>
                 <CardBody className="text-center">
                     <CardSubtitle className="font-weight-bold">{course.title}</CardSubtitle>
-                    <CardText>{course.disc}</CardText>
+                    <CardText>{course.discription}</CardText>
                     <Container className="text-center">
                         <Button color="danger" onClick={()=>{
                             deleteCourse(course.id);
